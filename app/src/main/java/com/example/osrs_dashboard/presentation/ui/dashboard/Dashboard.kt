@@ -10,7 +10,6 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
@@ -23,15 +22,6 @@ import com.example.osrs_dashboard.utils.constants.DashboardConstants
 fun Dashboard(
     navController: NavController
 ) {
-    val context = LocalContext.current
-
-    val initialState = DashboardUiState(
-        title = "Old School Runescape Dashboard App",
-        cards = DashboardConstants.DASHBOARD_CARD_DATA
-    )
-
-
-
     Surface(
         color = OSRS_Surface_Dark,
         modifier = Modifier.fillMaxSize()
